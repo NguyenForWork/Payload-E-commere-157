@@ -5,7 +5,8 @@
 
 
 
-![Untitled](Test-157/Untitled.png)
+![Untitled]([Test-157/Untitled.png](https://github.com/NguyenForWork/Test-157/blob/main/Untitled.png)
+![Untitled]([Test-157/Untitled.png](https://github.com/NguyenForWork/Test-157/blob/main/Untitled1.png)
 
 - Banner
 - Danh mục sản phẩm
