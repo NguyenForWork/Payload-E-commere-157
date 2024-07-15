@@ -1,0 +1,25 @@
+@use '../../_css/queries.scss' as *;
+
+.header {
+  padding: 0;
+  background-color: white; /* Đặt màu nền của header là màu trắng */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tạo shadow nhẹ cho header */
+  margin-bottom: var(--base); /* Thêm khoảng cách dưới header */
+}
+
+.wrap {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: calc(var(--base) / 2) var(--base);
+}
+
+.logo {
+  width: 150px;
+}
+
+:global([data-theme="light"]) {
+  .logo {
+    filter: invert(1);
+  }
+}

@@ -1,0 +1,24 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+  background-color: var(--color-dark-50);
+
+  .image {
+    width: 160px; /* Điều chỉnh kích thước hình ảnh */
+    height: 160px; /* Điều chỉnh kích thước hình ảnh */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%; /* Làm tròn hình ảnh */
+    margin-bottom:0px; /* Khoảng cách giữa hình ảnh và tiêu đề */
+  }
+  .title {
+    padding: 0px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+  }
+}

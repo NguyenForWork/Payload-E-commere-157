@@ -1,0 +1,71 @@
+// @import "../../../_css/common";
+
+// .form {
+//   display: flex;
+//   flex-direction: column;
+//   gap: var(--base);
+// }
+
+// .actions {
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: var(--base);
+// }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adjust as needed */
+  padding-bottom: 100px;
+}
+
+.fieldGroup {
+  display: flex;
+  gap: 20px; /* Adjust as needed */
+  margin-bottom: 20px; /* Margin between field groups */
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  margin-bottom: 5px; /* Space between label and input */
+}
+
+.field input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background-color: #ffffff; 
+  color: #000000;
+  border-radius: 4px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: #3366ff; /* Highlight color when input is focused */
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between; /* Align buttons to opposite sides */
+  gap: 20px; /* Space between buttons */ 
+}
+
+.actions button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.actions button[disabled] {
+  opacity: 0.5; /* Reduce opacity for disabled button */
+  cursor: not-allowed;
+}
+
