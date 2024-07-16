@@ -16,10 +16,10 @@ export default async function RecoverPassword() {
 }
 
 export const metadata: Metadata = {
-  title: 'Recover Password',
-  description: 'Enter your email address to recover your password.',
+  title: 'Khôi Phục Mật Khẩu',
+  description: 'Nhập địa chỉ email của bạn để khôi phục mật khẩu.',
   openGraph: mergeOpenGraph({
-    title: 'Recover Password',
+    title: 'Khôi Phục Mật Khẩu',
     url: '/recover-password',
   }),
 }

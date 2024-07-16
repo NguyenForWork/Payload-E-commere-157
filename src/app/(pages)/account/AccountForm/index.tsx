@@ -74,7 +74,7 @@ const AccountForm: React.FC = () => {
     if (user === null) {
       router.push(
         `/login?error=${encodeURIComponent(
-          'You must be logged in to view this page.',
+          'Bạn  phải đăng nhập.',
         )}&redirect=${encodeURIComponent('/account')}`,
       )
     }
@@ -102,19 +102,20 @@ const AccountForm: React.FC = () => {
             register={register}
             error={errors.email}
             type="email"
+            
           />
           <Input name="name" label="Name" register={register} error={errors.name} />
 
           <p>
-            {'Change your account details below, or '}
+            {'Để thay đổi mật khẩu '}
             <button
               type="button"
               className={classes.changePassword}
               onClick={() => setChangePassword(!changePassword)}
             >
-              click here
+              Nhấn vào đây
             </button>
-            {' to change your password.'}
+            {''}
           </p>
         </Fragment>
       ) : (
@@ -126,7 +127,7 @@ const AccountForm: React.FC = () => {
               className={classes.changePassword}
               onClick={() => setChangePassword(!changePassword)}
             >
-              cancel
+              Hủy
             </button>
             .
           </p>
@@ -150,8 +151,8 @@ const AccountForm: React.FC = () => {
         </Fragment>
       )}
       <Button
-        type="submit"
-        label={isLoading ? 'Processing' : changePassword ? 'Change Password' : 'Update Account'}
+        type="Chấp nhận"
+        label={isLoading ? 'Processing' : changePassword ? 'Đổi mật khẩu' : 'Cập nhật'}
         disabled={isLoading}
         appearance="primary"
         className={classes.submit}

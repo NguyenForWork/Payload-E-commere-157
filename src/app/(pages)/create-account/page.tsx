@@ -12,13 +12,13 @@ import classes from './index.module.scss'
 export default async function CreateAccount() {
   await getMeUser({
     validUserRedirect: `/account?warning=${encodeURIComponent(
-      'Cannot create a new account while logged in, please log out and try again.',
+      'Không thể tạo tài khoản mới khi đang đăng nhập. Vui lòng đăng xuất và thử lại.',
     )}`,
   })
 
   return (
     <Gutter className={classes.createAccount}>
-      <h1>Create Account</h1>
+      <h1>Tạo Tài Khoản</h1>
       <RenderParams />
       <CreateAccountForm />
     </Gutter>
@@ -26,10 +26,10 @@ export default async function CreateAccount() {
 }
 
 export const metadata: Metadata = {
-  title: 'Account',
-  description: 'Create an account or log in to your existing account.',
+  title: 'Tài Khoản',
+  description: 'Tạo tài khoản hoặc đăng nhập vào tài khoản hiện có của bạn.',
   openGraph: mergeOpenGraph({
-    title: 'Account',
+    title: 'Tài Khoản',
     url: '/account',
   }),
 }

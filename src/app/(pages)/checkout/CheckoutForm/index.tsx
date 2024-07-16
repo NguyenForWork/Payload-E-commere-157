@@ -103,9 +103,9 @@ export const CheckoutForm: React.FC<{}> = () => {
         <input type="text" id="state" name="state" />
       </div>
       <div className={classes.actions}>
-        <Button label="Back to cart" href="/cart" appearance="secondary" />
+        <Button label="Quay về giỏ hàng" href="/cart" appearance="secondary" />
         <Button
-          label={isLoading ? 'Loading...' : 'Checkout'}
+          label={isLoading ? 'Loading...' : 'Đặt hàng'}
           type="submit"
           appearance="primary"
           disabled={isLoading}

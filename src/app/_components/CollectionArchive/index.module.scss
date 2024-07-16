@@ -30,11 +30,14 @@
 
 .pageRange {
   margin-bottom: var(--base);
+  margin-left: calc(8 * var(--base)); // Thêm khoảng cách bên trái
 
   @include mid-break {
     margin-bottom: var(--base);
+    margin-left: calc(8 * var(--base)); // Thêm khoảng cách bên trái cho mid-break
   }
 }
+
 
 .list {
   position: relative;
@@ -42,15 +45,18 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%; // Đảm bảo phần tử sử dụng toàn bộ chiều rộng
   gap: var(--base) 40px;
+  padding: 0 calc(5 * var(--base)); // Thêm padding hai bên
 
   @include mid-break {
     grid-template-columns: repeat(6, 1fr);
     gap: calc(var(--base) / 2) var(--base);
+    padding: 0 calc(5 * var(--base)); // Thêm padding hai bên cho mid-break
   }
 }
+
 
 .column {
   grid-column-end: span 3;

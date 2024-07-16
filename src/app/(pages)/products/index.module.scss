@@ -1,0 +1,17 @@
+
+@import '../../_css/common';
+
+.container {
+  width: 100%;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr 105%;
+  gap: -10px;
+
+  @include large-break {
+    grid-template-columns: 100%;
+    gap: 48px;
+  }
+}

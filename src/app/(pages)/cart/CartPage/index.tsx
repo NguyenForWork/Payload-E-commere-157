@@ -43,14 +43,14 @@ export const CartPage: React.FC<{
                 <Fragment>
                   {' '}
                   <Link href={`/${productsPage.slug}`}>Click vào đây</Link>
-                  {` to shop.`}
+                  {` để vào cửa hàng.`}
                 </Fragment>
               )}
               {!user && (
                 <Fragment>
                   {' '}
                   <Link href={`/login?redirect=%2Fcart`}>Đăng nhập</Link>
-                  {` to view a saved cart.`}
+                  {` để lưu giỏ hàng`}
                 </Fragment>
               )}
             </div>
@@ -65,7 +65,7 @@ export const CartPage: React.FC<{
                     <p></p>
                     <p>Số lượng</p>
                   </div>
-                  <p className={classes.headersubtotal}>Subtotal</p>
+                  <p className={classes.headersubtotal}>Tổng</p>
                 </div>
                 {/* CART ITEM LIST */}
                 <ul className={classes.itemsList}>
@@ -114,7 +114,7 @@ export const CartPage: React.FC<{
                 <Button
                   className={classes.checkoutButton}
                   href={user ? '/checkout' : '/login?redirect=%2Fcheckout'}
-                  label={user ? 'Checkout' : 'Login to checkout'}
+                  label={user ? 'Thanh toán' : 'Login to checkout'}
                   appearance="primary"
                 />
               </div>

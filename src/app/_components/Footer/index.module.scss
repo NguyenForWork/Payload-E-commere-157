@@ -1,43 +1,64 @@
-@use '../../_css/queries.scss' as *;
-
 .footer {
-  padding: calc(var(--base) * 4) 0;
-  background-color: var(--theme-elevation-1000);
-  color: var(--theme-elevation-0);
-
-  @include small-break {
-    padding: calc(var(--base) * 2) 0;
-  }
+  background-color: #e1d8d2; /* Màu nâu */
+  padding-top: 10px;
+  padding-bottom: 50px;
 }
 
-:global([data-theme="dark"]) {
-  .footer {
-    background-color: var(--theme-elevation-50);
-    color: var(--theme-elevation-1000);
-  }
-}
-
-.wrap {
+.container {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: calc(var(--base) / 2) var(--base);
+  margin-top: 25px; /* Khoảng cách giữa nav và footer */
 }
 
-.logo {
-  width: 150px;
+.column {
+  text-align: left;
 }
 
-.nav {
+.column:first-child {
+  width: 50%; /* Cột đầu tiên chiếm 60% */
   display: flex;
-  gap: calc(var(--base) / 4) var(--base);
-  align-items: center;
-  flex-wrap: wrap;
-  opacity: 1;
-  transition: opacity 100ms linear;
-  visibility: visible;
-
-  > * {
-    text-decoration: none;
-  }
+  flex-direction: column;
+  justify-content: center; /* Căn giữa theo chiều dọc */
 }
+
+.column:not(:first-child) {
+  width: 20%; /* Các cột còn lại chiếm 20% */
+}
+
+.heading {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.content {
+  margin-bottom: 20px;
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.icon {
+  width: 24px; /* Kích thước icon */
+  height: 24px; /* Kích thước icon */
+  margin-right: 10px;
+}
+
+.Infor {
+  border-radius: 10px; /* Bo góc */
+  padding: 0px; /* Khoảng cách bên trong */
+  max-width: 400px; /* Chiều rộng tối đa */
+  margin: 20px auto; /* Giữa trang */
+  text-align: left; /* Căn trái nội dung */
+}
+
+.heading {
+  font-size: 18px; /* Kích thước chữ */
+  color: #333; /* Màu chữ tối */
+  margin: 10px 0; /* Khoảng cách giữa các đoạn */
+
+  transition: color 0.3s; /* Hiệu ứng chuyển màu */
+}
+

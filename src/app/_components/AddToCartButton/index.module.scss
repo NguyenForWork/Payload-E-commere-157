@@ -2,6 +2,15 @@
   visibility: visible;
   opacity: 1;
   transition: opacity 100ms linear;
+  background-color: #a99665; // Thêm màu nền cho nút
+  color: white; // Đảm bảo văn bản trên nút có màu phù hợp với nền
+  padding-left: 42px;
+  padding-right: 42px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  border: none; // Loại bỏ viền mặc định của nút
+  border-radius: 4px; // Bo tròn các góc của nút
+  cursor: pointer; // Thay đổi con trỏ chuột khi di chuột qua nút
 }
 
 .green {
@@ -11,4 +20,14 @@
 .hidden {
   visibility: hidden;
   opacity: 0;
+  
 }
+
+.addToCartButton:hover {
+  background-color: #cab5a4; // Thay đổi màu nền khi di chuột qua nút
+}
+
+.addToCartButton:active {
+  background-color: #ffffff; // Thay đổi màu nền khi nhấn nút
+}
+

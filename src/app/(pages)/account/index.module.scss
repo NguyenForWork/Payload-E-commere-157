@@ -3,7 +3,7 @@
 .container {
   width: 100%;
   margin: 50px 0;
-
+    
   @include small-break {
     margin-top: 30px;
   }
@@ -28,12 +28,14 @@
   flex-direction: column;
   height: min-content;
   border-radius: 10px;
+  
 }
 
 .navItem {
   display: flex;
   gap: 12px;
-  padding: 20px;
+  padding: 0px;
+
 }
 
 .personalInfo {

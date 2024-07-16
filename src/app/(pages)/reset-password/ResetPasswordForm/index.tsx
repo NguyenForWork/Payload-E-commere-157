@@ -46,20 +46,20 @@ export const ResetPasswordForm: React.FC = () => {
       if (response.ok) {
         const json = await response.json()
 
-        // Automatically log the user in after they successfully reset password
+        // Tự động đăng nhập người dùng sau khi đặt lại mật khẩu thành công
         await login({ email: json.user.email, password: data.password })
 
-        // Redirect them to `/account` with success message in URL
-        router.push('/account?success=Password reset successfully.')
+        // Chuyển hướng họ đến `/account` với thông báo thành công trong URL
+        router.push('/account?success=' + encodeURIComponent('Đặt lại mật khẩu thành công.'))
       } else {
-        setError('There was a problem while resetting your password. Please try again later.')
+        setError('Có vấn đề trong quá trình đặt lại mật khẩu. Vui lòng thử lại sau.')
       }
     },
     [router, login],
   )
 
-  // when Next.js populates token within router,
-  // reset form with new token value
+  // Khi Next.js đưa token vào router,
+  // reset form với giá trị token mới
   useEffect(() => {
     reset({ token: token || undefined })
   }, [reset, token])
@@ -70,7 +70,7 @@ export const ResetPasswordForm: React.FC = () => {
       <Input
         name="password"
         type="password"
-        label="New Password"
+        label="Mật khẩu Mới"
         required
         register={register}
         error={errors.password}
@@ -79,7 +79,7 @@ export const ResetPasswordForm: React.FC = () => {
       <Button
         type="submit"
         appearance="primary"
-        label="Reset Password"
+        label="Đặt Lại Mật Khẩu"
         className={classes.submit}
       />
     </form>

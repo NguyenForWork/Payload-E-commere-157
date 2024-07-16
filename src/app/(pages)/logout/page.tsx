@@ -15,9 +15,9 @@ export default async function Logout() {
   try {
     settings = await fetchSettings()
   } catch (error) {
-    // when deploying this template on Payload Cloud, this page needs to build before the APIs are live
-    // so swallow the error here and simply render the page with fallback data where necessary
-    // in production you may want to redirect to a 404  page or at least log the error somewhere
+    // khi triển khai mẫu này trên Payload Cloud, trang này cần được xây dựng trước khi các API hoạt động
+    // vì vậy hãy nuốt lỗi ở đây và chỉ đơn giản hiển thị trang với dữ liệu dự phòng nếu cần thiết
+    // trong sản xuất bạn có thể muốn chuyển hướng đến trang 404 hoặc ít nhất là ghi lại lỗi ở đâu đó
     // console.error(error)
   }
 
@@ -29,10 +29,10 @@ export default async function Logout() {
 }
 
 export const metadata: Metadata = {
-  title: 'Logout',
-  description: 'You have been logged out.',
+  title: 'Đăng xuất',
+  description: 'Bạn đã đăng xuất.',
   openGraph: mergeOpenGraph({
-    title: 'Logout',
+    title: 'Đăng xuất',
     url: '/logout',
   }),
 }

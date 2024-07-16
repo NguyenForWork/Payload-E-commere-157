@@ -16,7 +16,7 @@ import classes from './index.module.scss'
 export default async function Order({ params: { id } }) {
   const { token } = await getMeUser({
     nullUserRedirect: `/login?error=${encodeURIComponent(
-      'You must be logged in to view this order.',
+      'Bạn cần đăng nhập để xem đơn hàng này.',
     )}&redirect=${encodeURIComponent(`/order/${id}`)}`,
   })
 
@@ -46,18 +46,18 @@ export default async function Order({ params: { id } }) {
   return (
     <div>
       <h5>
-        {`Order`}
+        {`Đơn hàng`}
         <span className={classes.id}>{` ${order.id}`}</span>
       </h5>
       <div className={classes.itemMeta}>
         <p>{`ID: ${order.id}`}</p>
-        <p>{`Payment Intent: ${order.stripePaymentIntentID}`}</p>
-        <p>{`Ordered On: ${formatDateTime(order.createdAt)}`}</p>
+        <p>{`Mã thanh toán: ${order.stripePaymentIntentID}`}</p>
+        <p>{`Ngày đặt: ${formatDateTime(order.createdAt)}`}</p>
         <p className={classes.total}>
-          {'Total: '}
-          {new Intl.NumberFormat('en-US', {
+          {'Tổng cộng: '}
+          {new Intl.NumberFormat('vi-VN', {
             style: 'currency',
-            currency: 'usd',
+            currency: 'VND',
           }).format(order.total / 100)}
         </p>
       </div>
@@ -77,7 +77,7 @@ export default async function Order({ params: { id } }) {
               <Fragment key={index}>
                 <div className={classes.row}>
                   <Link href={`/products/${product.slug}`} className={classes.mediaWrapper}>
-                    {!metaImage && <span className={classes.placeholder}>No image</span>}
+                    {!metaImage && <span className={classes.placeholder}>Không có hình ảnh</span>}
                     {metaImage && typeof metaImage !== 'string' && (
                       <Media
                         className={classes.media}
@@ -90,11 +90,11 @@ export default async function Order({ params: { id } }) {
                   <div className={classes.rowContent}>
                     {!stripeProductID && (
                       <p className={classes.warning}>
-                        {'This product is not yet connected to Stripe. To link this product, '}
+                        {'Sản phẩm này chưa được kết nối với Stripe. Để liên kết sản phẩm này, '}
                         <Link
                           href={`${process.env.NEXT_PUBLIC_SERVER_URL}/admin/collections/products/${id}`}
                         >
-                          edit this product in the admin panel
+                          chỉnh sửa sản phẩm này trong bảng quản trị
                         </Link>
                         {'.'}
                       </p>
@@ -104,7 +104,7 @@ export default async function Order({ params: { id } }) {
                         {title}
                       </Link>
                     </h6>
-                    <p>{`Quantity: ${quantity}`}</p>
+                    <p>{`Số lượng: ${quantity}`}</p>
                     <Price product={product} button={false} quantity={quantity} />
                   </div>
                 </div>
@@ -122,10 +122,10 @@ export default async function Order({ params: { id } }) {
 
 export async function generateMetadata({ params: { id } }): Promise<Metadata> {
   return {
-    title: `Order ${id}`,
-    description: `Order details for order ${id}.`,
+    title: `Đơn hàng ${id}`,
+    description: `Chi tiết đơn hàng cho đơn hàng ${id}.`,
     openGraph: mergeOpenGraph({
-      title: `Order ${id}`,
+      title: `Đơn hàng ${id}`,
       url: `/orders/${id}`,
     }),
   }

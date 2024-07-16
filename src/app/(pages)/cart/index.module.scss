@@ -1,7 +1,7 @@
 @use '../../_css/common.scss' as *;
 
 .container {
-  margin-top: 50px;
+  margin-top: 40px;
   width: 100%;
 
   @include small-break {

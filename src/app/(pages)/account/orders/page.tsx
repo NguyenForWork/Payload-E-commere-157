@@ -15,7 +15,7 @@ import classes from './index.module.scss'
 export default async function Orders() {
   const { token } = await getMeUser({
     nullUserRedirect: `/login?error=${encodeURIComponent(
-      'You must be logged in to view your orders.',
+      'Bạn cần đăng nhập để xem đơn hàng của mình.',
     )}&redirect=${encodeURIComponent('/orders')}`,
   })
 
@@ -43,9 +43,9 @@ export default async function Orders() {
 
   return (
     <div>
-      <h5>My Orders</h5>
+      <h5>Đơn hàng của bạn</h5>
       {(!orders || !Array.isArray(orders) || orders?.length === 0) && (
-        <p className={classes.noOrders}>You have no orders.</p>
+        <p className={classes.noOrders}>Bạn chưa có đơn hàng nào</p>
       )}
       <RenderParams />
       {orders && orders.length > 0 && (
@@ -54,23 +54,23 @@ export default async function Orders() {
             <li key={order.id} className={classes.order}>
               <Link className={classes.item} href={`/account/orders/${order.id}`}>
                 <div className={classes.itemContent}>
-                  <h6 className={classes.itemTitle}>{`Order ${order.id}`}</h6>
+                  <h6 className={classes.itemTitle}>{`Đơn hàng ${order.id}`}</h6>
                   <div className={classes.itemMeta}>
                     <p>
-                      {'Total: '}
-                      {new Intl.NumberFormat('en-US', {
+                      {'Tổng cộng: '}
+                      {new Intl.NumberFormat('vi-VN', {
                         style: 'currency',
-                        currency: 'usd',
+                        currency: 'VND',
                       }).format(order.total / 100)}
                     </p>
-                    <p className={classes.orderDate}>{`Ordered On: ${formatDateTime(
+                    <p className={classes.orderDate}>{`Ngày đặt: ${formatDateTime(
                       order.createdAt,
                     )}`}</p>
                   </div>
                 </div>
                 <Button
                   appearance="default"
-                  label="View Order"
+                  label="Xem đơn hàng"
                   className={classes.button}
                   el="link"
                   href={`/account/orders/${order.id}`}
@@ -85,10 +85,10 @@ export default async function Orders() {
 }
 
 export const metadata: Metadata = {
-  title: 'Orders',
-  description: 'Your orders.',
+  title: 'Đơn hàng',
+  description: 'Các đơn hàng của bạn.',
   openGraph: mergeOpenGraph({
-    title: 'Orders',
+    title: 'Đơn hàng',
     url: '/orders',
   }),
 }
