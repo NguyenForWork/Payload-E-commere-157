@@ -67,5 +67,5 @@ Code thêm thành phần trang tài khoản và CSS lại theo ý muốn.
 
 ![Untitled](https://github.com/NguyenForWork/Test-157/blob/main/media_readme/anh12.jpg)
 
-Custom lại HTML và CSS trong page 
+Custom lại HTML và CSS trong page cơ bản theo ý muốn.
 
