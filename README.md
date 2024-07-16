@@ -1,9 +1,8 @@
-![image](https://github.com/user-attachments/assets/e0c5fb05-b08c-426d-b2a4-08cd64b4a805)
-📎 web e-commerce cơ bản
+
 
 ## Video DEMO website
 
-![Video demo](https://www.youtube.com/watch?v=Rye4RTew44M))
+https://www.youtube.com/watch?v=Rye4RTew44M
 
 ## Xây dụng trang chủ website:
 
