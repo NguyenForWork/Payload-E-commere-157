@@ -1,8 +1,13 @@
 
+## Hướng dẫn cài đặt
 
-## Video DEMO website
+- Git clone project > mở project chạy lệnh npm install để cài đặt node modules > Chạy lệnh npm run dev để khởi chạy project trên localhost:3000/. 
+
+## VIDEO DEMO 
 
 https://www.youtube.com/watch?v=Rye4RTew44M
+
+##  CÁC BƯỚC XÂY DỰNG WEBSITE
 
 ## Xây dụng trang chủ website:
 
@@ -50,6 +55,6 @@ Code thêm thành phần trang tài khoản và CSS lại theo ý muốn.
 
 ## Các trag đăng nhập, tạo tài khoản và quên mật khẩu
 
-![Untitled](https://github.com/NguyenForWork/Test-157/blob/main/media_readme/anh11.png)
+![Untitled](https://github.com/NguyenForWork/Test-157/blob/main/media_readme/anh12.jpg)
 Custom lại HTML và CSS trong page 
 
