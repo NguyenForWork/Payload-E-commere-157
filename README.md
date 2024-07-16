@@ -3,6 +3,7 @@
 
 ## Video DEMO website
 
+![Video demo](https://www.youtube.com/watch?v=Rye4RTew44M))
 
 ## Xây dụng trang chủ website:
 
