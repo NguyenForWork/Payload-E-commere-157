@@ -151,7 +151,7 @@ const AccountForm: React.FC = () => {
         </Fragment>
       )}
       <Button
-        type="Chấp nhận"
+        type="submit"
         label={isLoading ? 'Processing' : changePassword ? 'Đổi mật khẩu' : 'Cập nhật'}
         disabled={isLoading}
         appearance="primary"
